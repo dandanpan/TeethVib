@@ -42,11 +42,11 @@ function [sigFreqFeature,sigSimilarity,sigEnergy] = featureExtra(sigSet, validIn
         sigSimilarity = [sigSimilarity; eventSimilarity];
     end
 
-%     figure;
-%     plot(sigEnergy(:,1));hold on;
-%     plot(sigEnergy(:,2));hold on;
-%     plot(sigEnergy(:,3));hold on;
-%     plot(sigEnergy(:,4));hold off;
+    figure;
+    plot(sigEnergy(:,1));hold on;
+    plot(sigEnergy(:,2));hold on;
+    plot(sigEnergy(:,3));hold on;
+    plot(sigEnergy(:,4));hold off;
     
 
 end

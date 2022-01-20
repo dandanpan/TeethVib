@@ -3,97 +3,98 @@ close all;
 clc;
 
 Fs = 2200;
+addpath('../data-CHASE/')
 % similarity 12,13,14,23,24,34
 
 %% D1 fix
-load('../data-CHASE/D1_fix_event.mat');
+load('D1_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D1Fix] = featureExtra(D1_fix_event, [1:10], Fs);
 title('D1_fix');
 mean(sigSimilarity)
 %% D1 ill
-load('../data-CHASE/D1_ill_event.mat');
+load('D1_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D1Ill] = featureExtra(D1_ill_event, [1:10], Fs);
 title('D1_ill');
 mean(sigSimilarity)
 %% D2 fix
-load('../data-CHASE/D2_fix_event.mat');
+load('D2_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D2Fix] = featureExtra(D2_fix_event, [1:10], Fs);
 title('D2_fix');
 % check
 mean(sigSimilarity)
 %% D2 ill
-load('../data-CHASE/D2_ill_event.mat');
+load('D2_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D1Ill] = featureExtra(D2_ill_event, [1:5,7:11], Fs);
 title('D2_ill');
 mean(sigSimilarity)
 %% D3 fix
-load('../data-CHASE/D3_fix_event.mat');
+load('D3_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D3Fix] = featureExtra(D3_fix_event, [1:10], Fs);
 title('D3_fix');
 mean(sigSimilarity)
 %% D3 ill
-load('../data-CHASE/D3_ill_event.mat');
+load('D3_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D3Ill] = featureExtra(D3_ill_event, [1:10], Fs);
 title('D3_ill');
 mean(sigSimilarity)
 %% D4 fix
-load('../data-CHASE/D4_fix_event.mat');
+load('D4_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D4Fix] = featureExtra(D4_fix_event, [5:14], Fs);
 title('D4_fix');
 mean(sigSimilarity)
 %% D4 ill
-load('../data-CHASE/D4_ill_event.mat');
+load('D4_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D4Ill] = featureExtra(D4_ill_event, [1:10], Fs);
 title('D4_ill');
 mean(sigSimilarity)
 
 %% D5 fix
-load('../data-CHASE/D5_fix_event.mat');
+load('D5_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D5Fix] = featureExtra(D5_fix_event, [15:24], Fs);
 title('D5_fix');
 mean(sigSimilarity)
 %% D4 ill
-load('../data-CHASE/D5_ill_event.mat');
+load('D5_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_D5Ill] = featureExtra(D5_ill_event, [1:10], Fs);
 title('D5_ill');
 
 %% N1 fix
-load('../data-CHASE/N1_fix_event.mat');
+load('N1_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N1Fix] = featureExtra(N1_fix_event, [1:4,10:12,16,18,19], Fs);
 title('N1_fix');
 mean(sigSimilarity)
 %% N1 ill
-load('../data-CHASE/N1_ill_event.mat');
+load('N1_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N1Ill] = featureExtra(N1_ill_event, [1:10], Fs);
 title('N1_ill');
 mean(sigSimilarity)
 %% N2 fix
-load('../data-CHASE/N2_fix_event.mat');
+load('N2_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N2Fix] = featureExtra(N2_fix_event, [1:10], Fs);
 mean(sigSimilarity)
 %% N2 ill
-load('../data-CHASE/N2_ill_event.mat');
+load('N2_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N2Ill] = featureExtra(N2_ill_event, [1:10], Fs);
 mean(sigSimilarity)
-% one caine not contacting
+% one caine not contacting -- confirmed
 %% N4 fix
-load('../data-CHASE/N4_fix_event.mat');
+load('N4_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N4Fix] = featureExtra(N4_fix_event, [1:10], Fs);
 mean(sigSimilarity)
 %% N4 ill
-load('../data-CHASE/N4_ill_event.mat');
+load('N4_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N4Ill] = featureExtra(N4_ill_event, [1:10], Fs);
 mean(sigSimilarity)
-% check the teeth
+% check the teeth, teeth actually not aligned
 % doesn't change is good
-% ideal model
+% TMJ wise ideal model, synced front and end
 %% N5 fix
-load('../data-CHASE/N5_fix_event.mat');
+load('N5_fix_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N5Fix] = featureExtra(N5_fix_event, [1:10], Fs);
 title('N5_fix');
 mean(sigSimilarity)
 %% N5 ill
-load('../data-CHASE/N5_ill_event.mat');
+load('N5_ill_event.mat');
 [sigFreqFeature,sigSimilarity,sigEnergy_N5Ill] = featureExtra(N5_ill_event, [1:10], Fs);
 title('N5_ill');
 mean(sigSimilarity)
